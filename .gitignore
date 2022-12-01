@@ -41,6 +41,7 @@ jspm_packages
 .DS_Store
 
 # Workbox
-**/public/workbox-*.js*
 **/public/sw.js
+**/public/sw.js.map
+**/public/workbox-*.js*
 **/public/worker-*.js*
