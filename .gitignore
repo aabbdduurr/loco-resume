@@ -37,5 +37,10 @@ jspm_packages
 .node_repl_history
 .next
 
-# Mac
+# Misc
 .DS_Store
+
+# Workbox
+**/public/workbox-*.js*
+**/public/sw.js
+**/public/worker-*.js*
