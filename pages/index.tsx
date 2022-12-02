@@ -43,7 +43,7 @@ export default function Home() {
                         hiddenBreakpoint="sm"
                         width={{ sm: 200, lg: 300 }}
                     >
-                        <Text>Application sidebar</Text>
+                        <Text>Application Sidebar</Text>
                     </Aside>
                 </MediaQuery>
             }
