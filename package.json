@@ -5,7 +5,7 @@
         "test:coverage": "jest --coverage && open ./coverage/lcov-report/index.html",
         "dev": "next dev",
         "build": "next build",
-        "build:server": "prettier --check . && eslint . &&  next build",
+        "build:server": "prettier --write . && eslint . &&  next build",
         "start": "next start",
         "format:check": "prettier --check .",
         "format:write": "prettier --write .",
