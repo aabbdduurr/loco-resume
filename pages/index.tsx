@@ -33,7 +33,7 @@ export default function Home() {
                     hidden={!opened}
                     width={{ sm: 200, lg: 300 }}
                 >
-                    <Text>Application navbar</Text>
+                    <Text>Application Navbar</Text>
                 </Navbar>
             }
             aside={
