@@ -2,7 +2,7 @@
 
 A Free, ATS friendly, Open-source, Offline, Feature-rich Resume Builder
 
-TODO:
+## TODO:
 
 1. Backend
 2. Frontend
