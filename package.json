@@ -5,6 +5,7 @@
         "test:coverage": "jest --coverage && open ./coverage/lcov-report/index.html",
         "dev": "next dev",
         "build": "next build",
+        "build:server": "prettier --check . && eslint . &&  next build",
         "start": "next start",
         "format:check": "prettier --check .",
         "format:write": "prettier --write .",
@@ -27,6 +28,7 @@
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
+        "@next/eslint-plugin-next": "^13.0.6",
         "@testing-library/dom": "^8.19.0",
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",

@@ -6,4 +6,7 @@ const withPWA = require('next-pwa')({
 module.exports = withPWA({
     // config
     pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
+    experimental: {
+        forceSwcTransforms: true,
+    },
 })
