@@ -1,7 +1,5 @@
-import Head from "@components/head";
+import Head from '@components/head'
 
 export default function Home() {
-    return (
-        <Head></Head>
-    )
+    return <Head></Head>
 }

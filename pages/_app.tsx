@@ -1,21 +1,25 @@
 import Head from 'next/head'
 import '../styles/globals.css'
 import { AppProps } from 'next/app'
-import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core'
-import { useHotkeys, useLocalStorage } from '@mantine/hooks';
+import {
+    ColorScheme,
+    ColorSchemeProvider,
+    MantineProvider,
+} from '@mantine/core'
+import { useHotkeys, useLocalStorage } from '@mantine/hooks'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
     const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
         key: 'mantine-color-scheme',
         defaultValue: 'light',
         getInitialValueInEffect: true,
-      });
+    })
 
-      const toggleColorScheme = (value?: ColorScheme) =>
-      setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
-  
-    useHotkeys([['mod+J', () => toggleColorScheme()]]);
-      
+    const toggleColorScheme = (value?: ColorScheme) =>
+        setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
+
+    useHotkeys([['mod+J', () => toggleColorScheme()]])
+
     return (
         <>
             <Head>
@@ -45,14 +49,17 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                 <link rel="apple-touch-icon" href="/apple-icon.png"></link>
                 <meta name="theme-color" content="#317EFB" />
             </Head>
-            <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-            <MantineProvider
-                withGlobalStyles
-                withNormalizeCSS
-                theme={{ colorScheme }}
+            <ColorSchemeProvider
+                colorScheme={colorScheme}
+                toggleColorScheme={toggleColorScheme}
             >
-                <Component {...pageProps} />
-            </MantineProvider>
+                <MantineProvider
+                    withGlobalStyles
+                    withNormalizeCSS
+                    theme={{ colorScheme }}
+                >
+                    <Component {...pageProps} />
+                </MantineProvider>
             </ColorSchemeProvider>
         </>
     )
