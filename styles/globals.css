@@ -11,6 +11,12 @@ a {
     text-decoration: none;
 }
 
+svg {
+    stroke: currentColor;
+    width: 100%;
+    stroke-width: 1;
+}
+
 * {
     box-sizing: border-box;
 }
